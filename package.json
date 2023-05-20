@@ -7,8 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "prepare": "husky install",
-    "commit": "cz"
+    "release": "npm version $(semver $npm_package_version -i minor)"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -25,15 +24,5 @@
     "husky": "^8.0.3",
     "typescript": "^4.9.3",
     "vite": "^4.2.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
-    }
   }
 }
