@@ -8,7 +8,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "version": "echo $(semver $npm_package_version -i minor)",
-    "release": "npm version $(semver $npm_package_version -i minor)"
+    "release": "npm version minor"
   },
   "dependencies": {
     "react": "^18.2.0",
